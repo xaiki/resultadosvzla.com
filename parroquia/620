@@ -1,0 +1,666 @@
+<!-- views/index.php -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KRV97FSJ');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Elecciones Presidenciales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        .counter-number {
+            font-size: 4rem;
+        }
+        .titulo {
+            font-family: "Bebas Neue", sans-serif;
+            transform: uppercase;
+            font-size: 3rem;
+            padding: 1rem 0;
+        }
+        .scrollable-container {
+            height: 80vh; /* Ajusta esta altura según tus necesidades */
+            overflow-y: auto;
+        }
+
+        #acta {
+            display: none ;
+        }
+
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRV97FSJ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header class="text-white text-center" style="background: #262e63;">
+    <div class="container">
+        <a href="/"><img src="/assets/header.png" alt="Logo" class="img-fluid"></a>
+    </div>
+</header>
+
+<main class="flex-grow-1">
+
+    
+<!-- Comparison Bar Component -->
+<div class="container my-4">
+
+    <div class="row align-items-start">
+
+        <div class="col-md-12" id="tabla">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <h2 class="titulo">Resultados - PQ. BARUTA</h2>
+                <div class="text-end">Actas digitalizadas: 176 (95,14%).
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="my-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3>Edmundo González</h3>
+                        <h4>58.841 votos</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto text-end">
+                            <img src="/assets/edmundo.png" alt="Edmundo" class="rounded-circle me-3" width="75" height="75">
+                        </div>
+                        <div class="progress flex-grow-1" style="height: 80px;">
+                            <div class="progress-bar bg-primary d-flex align-items-center justify-content-center" role="progressbar" style="width: 84%; padding: 5px;" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">84%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3>Nicolás Maduro</h3>
+                        <h4>10.055 votos</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto text-end">
+                            <img src="/assets/maduro.png" alt="Maduro" class="rounded-circle me-3" width="75" height="75">
+                        </div>
+                        <div class="progress flex-grow-1" style="height: 80px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 14%;" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">14%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3>Otros</h3>
+                        <h4>1.414 votos</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto text-end">
+                            <img src="/assets/other.png" alt="Edmundo" class="rounded-circle me-3" width="75" height="75">
+                        </div>
+                        <div class="progress flex-grow-1" style="height: 80px;">
+                            <div class="progress-bar d-flex align-items-center justify-content-center" role="progressbar" style="width: 2%; padding: 5px; background-color: #343a40;" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+    <div class="container my-4">
+        <h2 class="titulo">Información General</h2>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <div>
+                    <h5>Mesas Totales</h5>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">185</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h5>Mesas Transmitidas</h5>
+                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">176</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h5>Electores</h5>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">150.436</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h5>Votantes</h5>
+                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">70.374</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h5>Participación</h5>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">46,78%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+<main class="container my-4">
+    <h2 class="titulo">centros</h2>
+    <div class="table-responsive">
+        <table class="table table-striped" id="dependencyTable">
+            <tbody id="dependencyTableBody">
+
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO LA CONCEPCION</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 7 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3677" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO LOS RISCOS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3679" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CASA DE TODOS Y JUSTICIA MUNICIPAL</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3686" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>JARDIN DE INFANCIA PREESCOLAR MANUEL FELIPE RUGELES</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3688" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA PRIVADA MINERVA I</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3695" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA FE Y ALEGRIA COLEGIO MONTERREY</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 5 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3697" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>LICEO LOS ARCOS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 5 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3702" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>INSTITUTO UNIVERSITARIO DE NUEVAS PROFESIONES</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3704" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>COLEGIO MATER SALVATORI</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3711" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA CENTRO DE EDUCACION ACTIVA MARIA MONTESSORI</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3713" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>COLEGIO DE MEDICOS DEL DISTRITO METROPOLITANO DE CARACAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 5 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3720" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>LICEO NACIONAL JOSE ALBERTO VELANDIA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3722" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>TALLER LABORAL DORA BURGUEÑO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3729" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA JOSE TADEO MONAGAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (75%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3690" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>PREESCOLAR GUSTAVO ARISMENDI ITURBE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3691" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>COMPLEJO EDUCATIVO PRIVADO INSTITUTO ESCUELA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 10 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3692" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO MADRE MATILDE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3693" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO FRAY LUIS AMIGO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 8 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3706" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>COLEGIO LA CONCORDIA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3707" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>COLEGIO PROMESAS PATRIAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3708" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO EDUCATIVO ASOCIACION PROFESORES UNIVERSIDAD CENTRAL DE VENEZUELA  (CEAPUCV)</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3709" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>COLEGIO SANTO TOMAS DE VILLANUEVA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 5 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3710" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA ESTADAL LINO DE CLEMENTE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3723" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA INSTITUTO ARTURO MICHELENA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3724" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO LA COROMOTO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3725" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA NACIONAL HERMANAS MARIA LORENZA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3726" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA NACIONAL SANTA CRUZ DEL ESTE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 5 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3678" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA MUNICIPAL GENERAL JOSE ANTONIO PAEZ</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3680" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA MUNICIPAL NUMERO 05 MIGUEL JOSE SANZ</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3687" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>LICEO NACIONAL ALEJO FORTIQUE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 6 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3689" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA PRIVADA COLEGIO ALTO PRADO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (75%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3694" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>PRE ESCOLAR LAS LOMITAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3696" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>INSTITUTO UNIVERSITARIO DE TECNOLOGIA INDUSTRIAL RODOLFO LOERO ARISMENDI EXTENCION CARACAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3703" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>JARDIN DE INFANCIA DON ROMULO BENTANCOURT</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3705" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO VENEZOLANO AMERICANO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3712" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA NACIONAL REPUBLICA DE INDONESIA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3714" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO NUESTRA SEÑORA DE LA CONSOLACION</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3719" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA NUESTRA SEÑORA DEL ROSARIO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 6 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3721" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA NACIONAL BOLIVARIANA GENERALISIMO FRANCISCO DE MIRANDA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 3 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3728" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA NACIONAL CENTRO COMUNAL</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3681" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA NACIONAL SOROCAIMA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3682" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ASOCIACION DESARROLLO INTEGRAL COMUNITARIO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3683" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA  MUNICIPAL MONSEÑOR LUCAS GUILLERMO CASTILLO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3684" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>PRE-ESCOLAR NUESTRA SEÑORA DEL ROSARIO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 5 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3685" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>MODULO DE SERVICIO DE OJO DE AGUA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3698" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO DE EDUCACION INICIAL MUNICIPAL EL CARMEN</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3699" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIVERSIDAD SIMON BOLIVAR</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 5 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3700" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>AMBULATORIO URBANO TIPO 1 DOCTOR ANGEL GUEDES</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3715" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO EMIL FRIEDMAN</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 4 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3716" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA COLEGIO LAS CUMBRES</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 6 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3717" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>INSTITUTO DIDACTICO ANTONIO JOSE DE SUCRE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/3718" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var tableBody = document.getElementById("dependencyTableBody");
+        var rows = Array.from(tableBody.rows);
+
+        rows.sort(function(a, b) {
+            var nameA = a.cells[0].innerText.toUpperCase();
+            var nameB = b.cells[0].innerText.toUpperCase();
+            return nameA.localeCompare(nameB);
+        });
+
+        rows.forEach(function(row) {
+            tableBody.appendChild(row);
+        });
+    });
+</script>
+</main>
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p>Resultados Elecciones Presidenciales - Venezuela 2024 © |
+                    </p>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</body>
+</html>

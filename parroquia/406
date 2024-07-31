@@ -1,0 +1,576 @@
+<!-- views/index.php -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KRV97FSJ');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Elecciones Presidenciales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        .counter-number {
+            font-size: 4rem;
+        }
+        .titulo {
+            font-family: "Bebas Neue", sans-serif;
+            transform: uppercase;
+            font-size: 3rem;
+            padding: 1rem 0;
+        }
+        .scrollable-container {
+            height: 80vh; /* Ajusta esta altura según tus necesidades */
+            overflow-y: auto;
+        }
+
+        #acta {
+            display: none ;
+        }
+
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRV97FSJ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header class="text-white text-center" style="background: #262e63;">
+    <div class="container">
+        <a href="/"><img src="/assets/header.png" alt="Logo" class="img-fluid"></a>
+    </div>
+</header>
+
+<main class="flex-grow-1">
+
+    
+<!-- Comparison Bar Component -->
+<div class="container my-4">
+
+    <div class="row align-items-start">
+
+        <div class="col-md-12" id="tabla">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <h2 class="titulo">Resultados - PQ. TUCUPIDO</h2>
+                <div class="text-end">Actas digitalizadas: 50 (96,15%).
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="my-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3>Edmundo González</h3>
+                        <h4>11.603 votos</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto text-end">
+                            <img src="/assets/edmundo.png" alt="Edmundo" class="rounded-circle me-3" width="75" height="75">
+                        </div>
+                        <div class="progress flex-grow-1" style="height: 80px;">
+                            <div class="progress-bar bg-primary d-flex align-items-center justify-content-center" role="progressbar" style="width: 63%; padding: 5px;" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">63%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3>Nicolás Maduro</h3>
+                        <h4>6.459 votos</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto text-end">
+                            <img src="/assets/maduro.png" alt="Maduro" class="rounded-circle me-3" width="75" height="75">
+                        </div>
+                        <div class="progress flex-grow-1" style="height: 80px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">35%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3>Otros</h3>
+                        <h4>312 votos</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto text-end">
+                            <img src="/assets/other.png" alt="Edmundo" class="rounded-circle me-3" width="75" height="75">
+                        </div>
+                        <div class="progress flex-grow-1" style="height: 80px;">
+                            <div class="progress-bar d-flex align-items-center justify-content-center" role="progressbar" style="width: 2%; padding: 5px; background-color: #343a40;" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+    <div class="container my-4">
+        <h2 class="titulo">Información General</h2>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <div>
+                    <h5>Mesas Totales</h5>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">52</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h5>Mesas Transmitidas</h5>
+                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">50</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h5>Electores</h5>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">26.534</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h5>Votantes</h5>
+                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">18.385</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h5>Participación</h5>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">69,29%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+<main class="container my-4">
+    <h2 class="titulo">centros</h2>
+    <div class="table-responsive">
+        <table class="table table-striped" id="dependencyTable">
+            <tbody id="dependencyTableBody">
+
+                                            <tr>
+                    <td>PRE-ESCOLAR BOLIVARIANO NARCISO LOPEZ CAMACHO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1382" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BOLIVARIANA SAN VICENTE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1389" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA NACIONAL BOLIVARIANA BELLA VISTA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1391" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BOLIVARIANA EC-7 EL JOBO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1396" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA DC-23 SAN JOSE DE PUÑO DE ORO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1398" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CASA DE LA CULTURA RAFAEL RENGIFO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1405" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO DE EDUCACION INICIAL LOMAS DEL PARAISO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1407" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIVERSIDAD NACIONAL EXPERIMENTAL DE LA FUERZA ARMADA - UNEFA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1414" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>INSTITUTO DE EDUCACIÓN ESPECIAL TUCUPIDO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1421" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA NACIONAL JOSE CALIXTO MORIN</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1383" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA DE ESPECIALIDADES VICTORIO CABEZA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1384" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>GRUPO ESCOLAR FELIX ANTONIO SAA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1385" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA EC-45 LEONES DE FAJARDO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1386" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>LICEO BOLIVARIANO VICTOR MANUEL OVALLES</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1387" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA NACIONAL BOLIVARIANA ARENITA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1400" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA PRIMARIA BOLIVARIANA EC-24 LA CABRERA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1401" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA NUCLEO ESCOLAR RURAL-498 LAS PALMAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1402" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BOLIVARIANA LUIS GUGLIETA RAMOS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1403" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO DE VOTACION MUERTO ZORRO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1417" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO EDUCACIÓN INICIAL HUGO CHAVEZ FRIAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1418" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO DE VOTACION EL GUASDUAL</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1419" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BOLIVARIANA MARIA CONCEPCIÓN PALACIOS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1420" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA NARCISO LOPEZ CAMACHO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1381" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA UNITARIA E-20 PARATE BUENO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1388" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA ESTADAL ROBLECITO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1390" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA ARTURO ALVAREZ ALAYON</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1397" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA E-12 CHAPARRAL</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1399" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BOLIVARIANA EC-21 CUJI NEGRO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1404" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>SIMONCITO JOSE FELIX RIBAS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1406" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO DE EDUCACION INICIAL ROSA ELVIRA AQUINO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1408" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA ESTADAL UNITARIA EL DOS</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1413" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA CAMPO ALEGRE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1415" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>COMEDOR COMANDANTE PABLO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1422" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA BOLIVARIANA NACIONAL CARO DE LA NEGRA</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1392" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BOLIVARIANA EC-17 CAMACHO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1393" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA ESTADAL UNITARIA E-25 CERRO GRANDE</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1394" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>UNIDAD EDUCATIVA BOLIVARIANA PEDRO DEL CORRAL</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 2 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1395" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO DE EDUCACION INICIAL ONDINA BALZA BENITEZ</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1409" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CASA DEL PODER POPULAR</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1410" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>CENTRO DE EDUCACION INICIAL EL ARRENDAJO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (50%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1411" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+                                            <tr>
+                    <td>ESCUELA BASICA SAN GERONIMO</td>
+                    <td class="text-end">
+                        <span>Actas digitalizadas 1 (100%)</span>
+                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                        <a href="/centro/1412" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var tableBody = document.getElementById("dependencyTableBody");
+        var rows = Array.from(tableBody.rows);
+
+        rows.sort(function(a, b) {
+            var nameA = a.cells[0].innerText.toUpperCase();
+            var nameB = b.cells[0].innerText.toUpperCase();
+            return nameA.localeCompare(nameB);
+        });
+
+        rows.forEach(function(row) {
+            tableBody.appendChild(row);
+        });
+    });
+</script>
+</main>
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p>Resultados Elecciones Presidenciales - Venezuela 2024 © |
+                    </p>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</body>
+</html>
