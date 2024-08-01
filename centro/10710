@@ -58,23 +58,23 @@
 
         <div class="col-md-12" id="tabla">
             <div class="col-12 d-flex justify-content-between align-items-center">
-                <h2 class="titulo">Resultados - MP. PIRITU</h2>
-                <div class="text-end">Actas digitalizadas: 15 (51,72%).
+                <h2 class="titulo">Resultados - 210601002</h2>
+                <div class="text-end">Actas digitalizadas: 2 (100,00%).
                 </div>
             </div>
             <div class="col-12">
                 <div class="my-4">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h3>Edmundo González</h3>
-                        <h4>2.404 votos</h4>
+                        <h4>734 votos</h4>
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="me-auto text-end">
                             <img src="/assets/edmundo.png" alt="Edmundo" class="rounded-circle me-3" width="75" height="75">
                         </div>
                         <div class="progress flex-grow-1" style="height: 80px;">
-                            <div class="progress-bar bg-primary d-flex align-items-center justify-content-center" role="progressbar" style="width: 65%; padding: 5px;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                                <span class="text-white fw-bold h5">65%</span>
+                            <div class="progress-bar bg-primary d-flex align-items-center justify-content-center" role="progressbar" style="width: 69%; padding: 5px;" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">69%</span>
                             </div>
                         </div>
                     </div>
@@ -83,15 +83,15 @@
                 <div class="my-4">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h3>Nicolás Maduro</h3>
-                        <h4>1.212 votos</h4>
+                        <h4>327 votos</h4>
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="me-auto text-end">
                             <img src="/assets/maduro.png" alt="Maduro" class="rounded-circle me-3" width="75" height="75">
                         </div>
                         <div class="progress flex-grow-1" style="height: 80px;">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
-                                <span class="text-white fw-bold h5">33%</span>
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 31%;" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">31%</span>
                             </div>
                         </div>
                     </div>
@@ -100,15 +100,15 @@
                 <div class="my-4">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h3>Otros</h3>
-                        <h4>86 votos</h4>
+                        <h4>6 votos</h4>
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="me-auto text-end">
                             <img src="/assets/other.png" alt="Edmundo" class="rounded-circle me-3" width="75" height="75">
                         </div>
                         <div class="progress flex-grow-1" style="height: 80px;">
-                            <div class="progress-bar d-flex align-items-center justify-content-center" role="progressbar" style="width: 2%; padding: 5px; background-color: #343a40;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                                <span class="text-white fw-bold h5">2%</span>
+                            <div class="progress-bar d-flex align-items-center justify-content-center" role="progressbar" style="width: 1%; padding: 5px; background-color: #343a40;" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100">
+                                <span class="text-white fw-bold h5">1%</span>
                             </div>
                         </div>
                     </div>
@@ -125,58 +125,54 @@
             <div class="col-md-6">
                 <div>
                     <h5>Mesas Totales</h5>
-                    <div class="counter-number font-weight-bold" style="color: #000475;">29</div>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">2</div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div>
                     <h5>Mesas Transmitidas</h5>
-                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">15</div>
+                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">2</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div>
                     <h5>Electores</h5>
-                    <div class="counter-number font-weight-bold" style="color: #000475;">6.006</div>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">1.805</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div>
                     <h5>Votantes</h5>
-                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">3.707</div>
+                    <div class="counter-number font-weight-bold" style="color: #0EBDEA;">1.068</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div>
                     <h5>Participación</h5>
-                    <div class="counter-number font-weight-bold" style="color: #000475;">61,72%</div>
+                    <div class="counter-number font-weight-bold" style="color: #000475;">59,17%</div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Main Content -->
 <main class="container my-4">
-    <h2 class="titulo">parroquias</h2>
+    <h2 class="titulo">mesas</h2>
     <div class="table-responsive">
         <table class="table table-striped" id="dependencyTable">
             <tbody id="dependencyTableBody">
 
                                             <tr>
-                    <td>PQ. PIRITU</td>
+                    <td>1</td>
                     <td class="text-end">
-                        <span>Actas digitalizadas 12 (60%)</span>
-                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>                        <a href="/parroquia/375" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                        <span></span>
+                                                <a href="/mesa/10710/10615" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
                     </td>
                 </tr>
                                             <tr>
-                    <td>PQ. SAN JOSE DE LA COSTA</td>
+                    <td>2</td>
                     <td class="text-end">
-                        <span>Actas digitalizadas 3 (33%)</span>
-                        <div class="progress" style="width: 100px; display: inline-block; vertical-align: middle; height: 10px; margin-left: 10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>                        <a href="/parroquia/376" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
+                        <span></span>
+                                                <a href="/mesa/10710/20829" class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></a>
                     </td>
                 </tr>
             
@@ -223,4 +219,3 @@
 
 </body>
 </html>
-ml>
